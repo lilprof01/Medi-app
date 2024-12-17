@@ -230,6 +230,18 @@ button:active{
     top: 0;
     left: 0;
   }
+
+  .logo{
+    height: 40px;
+  }
+
+  .header ul{
+    gap: 20px;
+  }
+
+  .header a{
+    font-size: x-small;
+  }
 }
 
 @media (790px < width < 1200px) {
