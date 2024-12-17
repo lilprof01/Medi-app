@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Podkova:wght@400..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+
+  font-family: "podkova", serif;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 50px;
+  margin: 0 auto
+}
+
+.header ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 50px;
+}
+
+.header a{
+  color: black;
+  transition: all ease 0.3s;
+}
+
+.header a:hover{
+  color: #2AA7FD;
+}
+
+.logo{
+  height: 70px;
+}
+
+.content{
+  margin: 0 auto;
+  padding: 10px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.content h1{
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 50px;
+}
+
+.content p{
+  font-weight: 100;
+  opacity: 0.7;
+}
+
+h1 span{
+  color: #2AA7FD;
+}
+
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+button{
+  border: 1px solid #2AA7FD;
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 10px 50px;
+  color: #2AA7FD;
+  transition: all ease 0.3s;
+}
+
+button:hover{
+  background-color: #2AA7FD;
+  color: white;
+  cursor: pointer;
+}
+
+button:active{
+  opacity: 0.7;
+}
+
+.content-body{
+  margin: 0 auto;
+  padding: 10px 50px;
+  max-width: 800px;
+  position: relative;
+}
+
+.content-body img{
+  height: 300px;
+}
+
+.blur{
+  background-color: #2aa9fd6a;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: 60px;
+  left: 425px;
+  pointer-events: none;
+  filter: blur(50px);
+  z-index: -1;
+}
+
+.blur2{
+  background-color: #d9ebf8;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: 90px;
+  left: 220px;
+  pointer-events: none;
+  filter: blur(50px);
+  z-index: -1;
+}
+
+.circle{
+  transition: all ease 0.3s;
+  background-color: white;
+  transition: all ease 0.3s;
+  z-index: 1;
+}
+
+.circle::before{
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border: 1px dashed #2AA7FD;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  z-index: -1; 
+}
+
+.circle:hover{
+  scale: 1.5;
+  cursor: pointer;
+}
+
+.circle:hover::before{
+  animation: rotate 20s ease infinite forwards;
+}
+
+@keyframes rotate {
+  from{
+    rotate: 0deg;
+  }
+  to{
+    rotate: 360deg;
+  }
+}
+
+.star{
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  top: 350px;
+  left: 170px;
+  z-index: -1;
+}
+
+.star2{
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  top: 220px;
+  left: 1030px;
+  z-index: -1;
+}
+
+.blur-star{
+  position: absolute;
+  top: 510px;
+  left: 190px;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.blur-star2{
+  position: absolute;
+  top: 530px;
+  left: 950px;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.stat-img{
+  height: 60px;
+  position: absolute;
+  top: 540px;
+  left: 700px;
+  z-index: 2;
+}
+
+.gstat-img{
+  height: 65px;
+  position: absolute;
+  top: 460px;
+  left: 280px;
+  z-index: 2;
+}
+
+@media (800px > width) {
+  .star, .star2, .blur-star, .blur-star2, .stat-img, .gstat-img{
+    display: none;
+  }
+
+  .content-body{
+    display: none;
+  }
+
+  .content-body img{
+    scale: 0.5;
+  }
+
+  .circle{
+    scale: 0.5;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media (790px < width < 1200px) {
+  .star, .star2, .blur-star, .blur-star2{
+    display: none;
+  }
+}
